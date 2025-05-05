@@ -1,0 +1,82 @@
+import React from "react";
+import {Text, View, StyleSheet,Image, TextInput, Button, TouchableOpacity} from "react-native";
+const Assign = () => {
+    return(
+        <View style = {designing.page}>
+            <Image
+            source = {require("../../assets/images/bot.png")}
+            style = {{alignSelf:"center", height:"40", width:"40", marginTop:"100", marginBottom:"20"}}
+            />
+            <Text style = {{fontSize:"20", fontWeight:"bold", color:"white", alignSelf:"center"}}>Sign in to finpal</Text>
+                <View style = {{paddingTop:"40"}}> 
+                <Text style = {{color:"white", margin:"5"}}>Email Address</Text>
+                <View style = {{height: "30", backgroundColor:"#221B17", borderRadius:20, flexDirection:"row"}}>
+                    <Image
+                    source={require("../../assets/images/email.png")}
+                    style = {{height:"15", width:"15", margin:"8"}}
+                    />
+                    <TextInput
+                    placeholder="Enter your email address..."
+                    style = {{alignItems:"center", marginHorizontal:"5", color:"white"}}
+                    />
+                    </View> </View>
+                    <View style = {{paddingTop:"10"}}> 
+                <Text style = {{color:"white", margin:"5"}}>Password</Text>
+                <View style = {{height: "30", backgroundColor:"#221B17", borderRadius:20, flexDirection:"row", justifyContent:"space-between"}}>
+                    <View style = {{flexDirection:"row"}}><Image
+                    source={require("../../assets/images/lock.png")}
+                    style = {{height:"15", width:"15", margin:"8", color:"white"}}
+                    />
+                    <TextInput
+                    placeholder="Enter your password"
+                    style = {{alignItems:"center", marginHorizontal:"5", color:"white"}}
+                    secureTextEntry
+                    /></View>
+                     <Image
+                    source={require("../../assets/images/eye2.png")}
+                    style = {{height:"15", width:"15", margin:"8", opacity:0.2}}
+                    />
+                    </View>
+                    <View style = {{justifyContent:"space-between", flexDirection:"row", margin:"5"}}>
+                    <View style = {{height:2, width:"70", backgroundColor:"#83C421", borderRadius:20}}></View>
+                    <View style = {{height:2, width:"70", backgroundColor:"#83C421", borderRadius:20}}></View>
+                    <View style = {{height:2, width:"70", backgroundColor:"#83C421", borderRadius:20}}></View>
+                    <View style = {{height:2, width:"70", backgroundColor:"#83C421", borderRadius:20}}></View>
+                    </View>
+                    <Text style = {{color:"white", fontSize:"10" }}>Password strength Great! 👍</Text>
+                   </View>
+                   <View style = {{paddingTop:"30"}}> 
+                <Text style = {{color:"white", margin:"5"}}>Confirm Password</Text>
+                <View style = {{height: "30", backgroundColor:"#221B17", borderRadius:20, flexDirection:"row", justifyContent:"space-between"}}>
+                    <View style = {{flexDirection:"row"}}><Image
+                    source={require("../../assets/images/lock.png")}
+                    style = {{height:"15", width:"15", margin:"8"}}
+                    />
+                    <TextInput
+                    placeholder="Enter your password"
+                    style = {{alignItems:"center", marginHorizontal:"5", color:"white"}}
+                    secureTextEntry
+                    /></View>
+                     <Image
+                    source={require("../../assets/images/eye2.png")}
+                    style = {{height:"15", width:"15", margin:"8", opacity:0.2}}
+                    />
+                    </View>
+                   </View>
+                    <View style = {{marginVertical:"30"}}>
+                        <TouchableOpacity>
+                        <View style = {{ backgroundColor:"#83C421", height:"40", borderRadius: 20, justifyContent:"center", margin:"5"}}>
+                            <Text style = {{alignSelf:"center", fontSize:"15", fontWeight:"bold", color:"white"}}>Create Account</Text></View></TouchableOpacity>
+                    </View>
+                    <TouchableOpacity>
+                    <Text style = {{alignSelf:"center", color:"#83C421", textDecorationLine:"underline"}}>I Already Have Account</Text></TouchableOpacity>
+        </View>   
+    )}
+export default Assign;
+const designing = StyleSheet.create({
+    page:{
+        backgroundColor:"black",
+        flex :1,
+        padding:"20"
+    },
+})
