@@ -42,7 +42,7 @@ const App = () => {
             description:"Just vibes, no stress 🎵💃,This one’s for the ones who dance in the kitchen, laugh at their own jokes, and live like the world’s their stage.",
             action : "added a new reel",
             time:"just now .",
-             option:"https://img.icons8.com/?size=100&id=84410&format=png&color=000000"
+             option:"https://img.icons8.com/?size=100&id=EqvOO04QCqSP&format=png&color=000000"
         },{
             id : 2,
             name:"Senator",
@@ -60,7 +60,7 @@ const App = () => {
             description:"We are always active💯👷💪...see more",
             action : "updated his cover picture",
             time:"An hour ago.",
-             option:"https://img.icons8.com/?size=100&id=84410&format=png&color=000000"
+             option:"https://img.icons8.com/?size=100&id=EqvOO04QCqSP&format=png&color=000000"
         },{
             id : 3,
             name:"Good_ness",
@@ -77,7 +77,7 @@ const App = () => {
             description:"If you ever wonder what joy looks like, play this on loop and turn up the volume on your happiness",
             whatapp:"https://img.icons8.com/?size=100&id=16712&format=png&color=000000",
             time :"5 hours ago.",
-            option:"https://img.icons8.com/?size=100&id=84410&format=png&color=000000"
+            option:"https://img.icons8.com/?size=100&id=EqvOO04QCqSP&format=png&color=000000"
         },{
             id : 4,
             name:"Dorcas",
@@ -93,7 +93,7 @@ const App = () => {
             whatapp:"https://img.icons8.com/?size=100&id=16712&format=png&color=000000",
             description:"Not everything has to make sense — sometimes it just has to make you smile...see more",
             time:"23 hours ago.",
-             option:"https://img.icons8.com/?size=100&id=84410&format=png&color=000000"
+             option:"https://img.icons8.com/?size=100&id=EqvOO04QCqSP&format=png&color=000000"
         },{
             id : 5,
             name:"Sabi_gal",
@@ -111,7 +111,7 @@ const App = () => {
             description:" Living my best life 🎬✨,This is what happens when the music hits just right, the mood aligns, and the camera’s rolling at the perfect moment.",
             action : "added a new reel",
             time:"2 days ago.",
-             option:"https://img.icons8.com/?size=100&id=84410&format=png&color=000000"
+             option:"https://img.icons8.com/?size=100&id=EqvOO04QCqSP&format=png&color=000000"
         }
     ];
     return(
@@ -166,6 +166,7 @@ const App = () => {
             <View>
                 <FlatList
                 data={firstdata}
+                showsHorizontalScrollIndicator={false}
                 horizontal = {true}
                 renderItem = {({item}) => {
                     return(
@@ -192,6 +193,7 @@ const App = () => {
             <View style = {{marginTop:"20"}}>
                 <FlatList
                 data={newsdata}
+                showsVerticalScrollIndicator={false}
                 renderItem={({item}) =>{
                     return(
                         <View style = {designing.newsfeed}>
@@ -206,59 +208,59 @@ const App = () => {
                             <View>
                               <TouchableOpacity>  <Image
                                 source={{uri: item.option}}
-                                style = {{height:"100", width:"200"}} /></TouchableOpacity>
+                                style = {{height:"30", width:"30"}} /></TouchableOpacity>
                             </View>
                             </View>
                             <View style = {{marginVertical:"5"}}>
-                            <Text>{item.description}<Text style={{color:"blue"}}> @Decodius</Text></Text>
+                           <Text>{item.description} <TouchableOpacity><Text style={{color:"blue"}}> @Decodius</Text></TouchableOpacity></Text>
                             </View>
-                            <Image
+                          <TouchableOpacity>  <Image
                             source={{uri: item.post}}
-                            style = {{height:"400"}} />
+                            style = {{height:"400"}} /></TouchableOpacity>
                             <View style = {{flexDirection:"row",marginVertical:"10", justifyContent:"space-between"}}>
                               {/* like */}
                                <View style = {{alignItems:"center"}}>
                                  <Text style = {{alignSelf:"center",marginHorizontal:"5"}}>{item.likenum}</Text>
-                                 <View style = {{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop:"15"}}>
+                                 <TouchableOpacity><View style = {{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop:"15"}}>
                                     <Image
                                 source={{uri: item.like}}
                                 style = {{height:"22", width:"22", margin:"5"}}
                                 />
                                 <Text>Like</Text>
-                                </View>
+                                </View></TouchableOpacity>
                                 </View>
                                {/* comment */}
                               <View style = {{alignItems:"center"}}>
                                 <Text style = {{alignSelf:"center", marginHorizontal:"5"}}>{item.commentnum}</Text>
-                                 <View style = {{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop:"15"}}>
+                                 <TouchableOpacity><View style = {{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop:"15"}}>
                                      <Image
                                 source={{uri: item.comment}}
                                 style = {{height:"20", width:"20", margin:"5"}}
                                 />
                                 <Text>Comment</Text>
-                                </View>
+                                </View></TouchableOpacity>
                                 </View>
                                 {/* send */}
                               <View style = {{alignItems:"center"}}>  
                                 <Text style = {{alignSelf:"center",marginHorizontal:"5"}}>{item.sendnum}</Text>
-                             <View style = {{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop:"15"}}>
-                                 <Image
+                             <TouchableOpacity><View style = {{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop:"15"}}>
+                                <Image
                                 source={{uri: item.whatapp}}
                                 style = {{height:"20", width:"20", margin:"5"}}
                                 />
                                 <Text>Send</Text>
-                                </View>
+                                </View></TouchableOpacity> 
                                 </View>
                                 {/* share */}
                                  <View style = {{alignItems:"center"}}>
                                     <Text style = {{alignSelf:"center",marginHorizontal:"5"}}>{item.sharenum}</Text> 
-                                    <View style = {{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop:"15"}}>
+                                    <TouchableOpacity><View style = {{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop:"15"}}>
                                         <Image
                                 source={{uri: item.share}}
                                 style = {{height:"22", width:"22", margin:"5"}}
                                 />
                                 <Text>Share</Text>
-                                </View> </View>
+                                </View> </TouchableOpacity></View>
                             </View>
                            </View>
                     )
